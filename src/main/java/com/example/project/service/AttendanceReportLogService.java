@@ -15,6 +15,7 @@ public class AttendanceReportLogService {
     }
 
     public AttendanceReportLog save(AttendanceReportLog log) {
+        Objects.requireNonNull(log, "log cannot be null");
         return repository.save(log);
     }
 
